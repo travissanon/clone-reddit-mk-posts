@@ -1,4 +1,6 @@
 import React from "react";
+import SVGFavorite from "../../../images/star.svg";
+import SVGFavoriteFilled from "../../../images/star--filled.svg";
 
 import "./style.scss";
 
@@ -34,7 +36,11 @@ const Post: React.FC<IPostProps> = ({
 				className="reddit-post__favorite"
 				onClick={() => handleFavoriteClick(id)}
 			>
-				<h1>{favorite ? "*" : "x"}</h1>
+				{favorite ? (
+					<img src={SVGFavoriteFilled} alt="favorited post" />
+				) : (
+					<img src={SVGFavorite} alt="favorite post" />
+				)}
 			</div>
 		</div>
 	);
