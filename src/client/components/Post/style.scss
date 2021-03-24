@@ -28,9 +28,9 @@
 		}
 	}
 
-	&__stuff {
+	&__content {
 		margin: 10px 5px;
-		max-width: 500px;
+		max-width: 450px;
 		width: 100%;
 	}
 
@@ -40,5 +40,6 @@
 
 	&__favorite {
 		width: 25px;
+		align-self: center;
 	}
 }

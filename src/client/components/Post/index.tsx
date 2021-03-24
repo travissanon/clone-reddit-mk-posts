@@ -26,7 +26,7 @@ const Post: React.FC<IPostProps> = ({
 			<div className="reddit-post__thumbnail">
 				<img src={thumbnail} alt="post thumbnail" />
 			</div>
-			<div className="reddit-post__stuff">
+			<div className="reddit-post__content">
 				<div className="reddit-post__title">
 					<h3>{title}</h3>
 				</div>
