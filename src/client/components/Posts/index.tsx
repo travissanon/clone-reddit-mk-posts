@@ -5,6 +5,8 @@ import "./style.scss";
 
 interface IPostsProps {
 	readonly data: IPost[];
+	readonly favoritePosts: any;
+	handleFavoriteClick: (postId: string) => void;
 }
 
 interface IPost {
@@ -14,7 +16,15 @@ interface IPost {
 	readonly author: string;
 }
 
-const Posts: React.FC<IPostsProps> = ({ data }) => {
+const Posts: React.FC<IPostsProps> = ({
+	data,
+	favoritePosts,
+	handleFavoriteClick,
+}) => {
+	const isFavoritePost = (id: string) => {
+		return favoritePosts.has(id);
+	};
+
 	return (
 		<div className="reddit-posts">
 			<div className="reddit-posts__container">
@@ -25,6 +35,8 @@ const Posts: React.FC<IPostsProps> = ({ data }) => {
 						title={post.title}
 						thumbnail={post.thumbnail}
 						author={post.author}
+						favorite={isFavoritePost(post.id)}
+						handleFavoriteClick={handleFavoriteClick}
 					/>
 				))}
 			</div>

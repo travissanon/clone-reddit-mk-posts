@@ -13,6 +13,7 @@ export interface IPost {
 
 const App: React.FC = () => {
 	const [redditPosts, setRedditPosts] = useState<Array<IPost>>([]);
+	const [favoritePosts, setFavoritePosts] = useState<any>(new Set());
 
 	useEffect(() => {
 		getRedditPosts().then((data) => setRedditPosts(data));
@@ -35,12 +36,31 @@ const App: React.FC = () => {
 		});
 	};
 
+	const toggleFavoritePost = (postId: string) => {
+		setFavoritePosts((prevState: any) => {
+			// spread operator is not working for Sets in Typescript for some reason.
+			const newState = new Set(Array.from(prevState));
+
+			if (newState.has(postId)) {
+				newState.delete(postId);
+			} else {
+				newState.add(postId);
+			}
+
+			return newState;
+		});
+	};
+
 	return (
 		<div className="reddit-posts">
 			<div className="reddit-posts__filters" onClick={() => sortPosts()}>
 				Sort Posts
 			</div>
-			<Posts data={redditPosts} />
+			<Posts
+				data={redditPosts}
+				favoritePosts={favoritePosts}
+				handleFavoriteClick={toggleFavoritePost}
+			/>
 		</div>
 	);
 };
