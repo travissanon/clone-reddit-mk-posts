@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.scss";
 
-interface IPostProps {
+export interface IPostProps {
 	readonly id: string;
 	readonly title: string;
 	readonly thumbnail: string;
