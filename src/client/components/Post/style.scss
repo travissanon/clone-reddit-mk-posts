@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+.reddit-post {
+	max-width: 720px;
+	width: 100%;
+	background-color: #f4f4f4;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+	font-family: "Open Sans", sans-serif;
+
+	&__thumbnail {
+		margin: 5px;
+
+		img {
+			border-radius: 4px;
+			height: 80px;
+			width: 100px;
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		h3 {
+			margin: 0;
+			font-weight: 600;
+		}
+	}
+
+	&__stuff {
+		margin: 10px 5px;
+		max-width: 500px;
+		width: 100%;
+	}
+
+	&__author {
+		font-size: 14px;
+	}
+}
