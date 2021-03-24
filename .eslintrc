@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["prettier", "@typescript-eslint", "import"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "prettier/prettier": ["error"],
+    "import/no-unresolved": "error"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
