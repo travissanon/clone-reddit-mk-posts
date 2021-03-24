@@ -12,12 +12,11 @@ const getRedditPosts = (): Promise<any> => {
 						child.data.author !== REDDIT_AUTHOR_AUTO_MODERATOR
 				)
 				.map((child: Record<string, any>) => {
-					return (({ id, thumbnail, title, author, created_utc }) => ({
+					return (({ id, thumbnail, title, author }) => ({
 						id,
 						thumbnail,
 						title,
 						author,
-						created_utc,
 					}))(child.data);
 				})
 		)
