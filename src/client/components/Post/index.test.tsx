@@ -1,16 +1,7 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
 
-import Post from "./index";
-
-interface IPostProps {
-	readonly id: string;
-	readonly title: string;
-	readonly thumbnail: string;
-	readonly author: string;
-	readonly favorite: boolean;
-	handleFavoriteClick: (postId: string) => void;
-}
+import Post, { IPostProps } from "./index";
 
 test("renders content to the page", () => {
 	const props: IPostProps = {

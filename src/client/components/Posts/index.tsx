@@ -3,13 +3,13 @@ import Post from "../Post/index";
 
 import "./style.scss";
 
-interface IPostsProps {
+export interface IPostsProps {
 	readonly data: IPost[];
-	readonly favoritePosts: any;
+	readonly favoritePosts: Set<string>;
 	handleFavoriteClick: (postId: string) => void;
 }
 
-interface IPost {
+export interface IPost {
 	readonly id: string;
 	readonly title: string;
 	readonly thumbnail: string;
