@@ -52,9 +52,9 @@ const App: React.FC = () => {
 
 	return (
 		<div className="reddit-posts">
-			<div className="reddit-posts__filters" onClick={() => sortPosts()}>
+			<button className="reddit-posts__filters" onClick={() => sortPosts()}>
 				Sort Posts
-			</div>
+			</button>
 			<Posts
 				data={redditPosts}
 				favoritePosts={favoritePosts}
