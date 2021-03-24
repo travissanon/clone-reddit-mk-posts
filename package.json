@@ -13,6 +13,10 @@
 	},
 	"jest": {
 		"preset": "ts-jest",
+		"transform": {
+			"^.+\\.(ts|tsx)?$": "ts-jest",
+			"^.+\\.(js|jsx)$": "babel-jest"
+		},
 		"moduleNameMapper": {
 			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/styleMock.js",
 			"\\.(css|less|scss)$": "<rootDir>/src/__mocks__/styleMock.js"
@@ -23,6 +27,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.13.10",
 		"@babel/preset-env": "^7.13.12",
+		"@babel/preset-react": "^7.12.13",
 		"@babel/preset-typescript": "^7.13.0",
 		"@types/jest": "^26.0.21",
 		"@types/react": "^17.0.3",
