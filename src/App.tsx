@@ -18,8 +18,28 @@ const App: React.FC = () => {
 		getRedditPosts().then((data) => setRedditPosts(data));
 	}, []);
 
+	const sortPosts = () => {
+		setRedditPosts((prevState) => {
+			const newState = [...prevState];
+			newState.sort((a: any, b: any) => {
+				if (a.title < b.title) {
+					return -1;
+				} else if (a.title > b.title) {
+					return 1;
+				} else {
+					return 0;
+				}
+			});
+
+			return newState;
+		});
+	};
+
 	return (
 		<div className="reddit-posts">
+			<div className="reddit-posts__filters" onClick={() => sortPosts()}>
+				Sort Posts
+			</div>
 			<Posts data={redditPosts} />
 		</div>
 	);
