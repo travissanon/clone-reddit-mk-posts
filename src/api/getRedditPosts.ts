@@ -1,6 +1,7 @@
 const REDDIT_API_POSTS_URL =
 	"https://www.reddit.com/r/mechanicalkeyboards.json";
 const REDDIT_AUTHOR_AUTO_MODERATOR = "AutoModerator";
+const REDDIT_MOD = "nickheller";
 
 const getRedditPosts = (): Promise<any> => {
 	return fetch(REDDIT_API_POSTS_URL)
@@ -9,7 +10,8 @@ const getRedditPosts = (): Promise<any> => {
 			data.data.children
 				.filter(
 					(child: Record<string, any>) =>
-						child.data.author !== REDDIT_AUTHOR_AUTO_MODERATOR
+						child.data.author !== REDDIT_AUTHOR_AUTO_MODERATOR &&
+						child.data.author !== REDDIT_MOD
 				)
 				.map((child: Record<string, any>) => {
 					return (({ id, thumbnail, title, author }) => ({
