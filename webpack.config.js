@@ -1,10 +1,20 @@
 const path = require("path");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  plugins: [new ESLintPlugin()],
+  plugins: [
+    new ESLintPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "index.html"),
+    }),
+  ],
   watch: true,
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./build",
+  },
   entry: {
     app: path.join(__dirname, "src", "index.tsx"),
   },
