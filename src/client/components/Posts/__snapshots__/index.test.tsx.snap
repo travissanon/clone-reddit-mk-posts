@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders content to the page 1`] = `
+<div
+  className="reddit-posts"
+>
+  <div
+    className="reddit-posts__container"
+  >
+    <div
+      className="reddit-post"
+      data-id="test1"
+    >
+      <div
+        className="reddit-post__thumbnail"
+      >
+        <img
+          alt="post thumbnail"
+          src=""
+        />
+      </div>
+      <div
+        className="reddit-post__content"
+      >
+        <div
+          className="reddit-post__title"
+        >
+          <h3>
+            Test One
+          </h3>
+        </div>
+        <div
+          className="reddit-post__author"
+        >
+          tester1
+        </div>
+      </div>
+      <div
+        className="reddit-post__favorite"
+        onClick={[Function]}
+      >
+        <img
+          alt="favorite post"
+          src={Object {}}
+        />
+      </div>
+    </div>
+    <div
+      className="reddit-post"
+      data-id="test2"
+    >
+      <div
+        className="reddit-post__thumbnail"
+      >
+        <img
+          alt="post thumbnail"
+          src=""
+        />
+      </div>
+      <div
+        className="reddit-post__content"
+      >
+        <div
+          className="reddit-post__title"
+        >
+          <h3>
+            Test One
+          </h3>
+        </div>
+        <div
+          className="reddit-post__author"
+        >
+          tester2
+        </div>
+      </div>
+      <div
+        className="reddit-post__favorite"
+        onClick={[Function]}
+      >
+        <img
+          alt="favorite post"
+          src={Object {}}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
