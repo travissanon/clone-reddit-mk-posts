@@ -7,9 +7,18 @@ interface IPostProps {
 	readonly title: string;
 	readonly thumbnail: string;
 	readonly author: string;
+	readonly favorite: boolean;
+	handleFavoriteClick: (postId: string) => void;
 }
 
-const Post: React.FC<IPostProps> = ({ id, title, thumbnail, author }) => {
+const Post: React.FC<IPostProps> = ({
+	id,
+	title,
+	thumbnail,
+	author,
+	favorite,
+	handleFavoriteClick,
+}) => {
 	return (
 		<div className="reddit-post" data-id={id}>
 			<div className="reddit-post__thumbnail">
@@ -20,6 +29,12 @@ const Post: React.FC<IPostProps> = ({ id, title, thumbnail, author }) => {
 					<h3>{title}</h3>
 				</div>
 				<div className="reddit-post__author">{author}</div>
+			</div>
+			<div
+				className="reddit-post__favorite"
+				onClick={() => handleFavoriteClick(id)}
+			>
+				<h1>{favorite ? "*" : "x"}</h1>
 			</div>
 		</div>
 	);
