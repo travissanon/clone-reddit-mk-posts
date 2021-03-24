@@ -23,7 +23,7 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				use: "ts-loader",
-				exclude: /ndoe_modules/,
+				exclude: [/node_modules/, /\.test.tsx?$/],
 			},
 			{
 				test: /\.(scss|css)$/,
