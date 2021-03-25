@@ -7,7 +7,7 @@ module.exports = {
 	plugins: [
 		new ESLintPlugin(),
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, "src", "index.html"),
+			template: path.join(__dirname, "src/client", "index.html"),
 		}),
 	],
 	watch: true,
@@ -16,7 +16,7 @@ module.exports = {
 		contentBase: "./build",
 	},
 	entry: {
-		app: path.join(__dirname, "src", "index.tsx"),
+		app: path.join(__dirname, "src/client", "index.tsx"),
 	},
 	module: {
 		rules: [
