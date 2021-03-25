@@ -3,6 +3,14 @@ List of Reddit posts from r/mechanicalkeyboards
 
 Im expanding on [reddit-mk-posts](https://github.com/travissanon/reddit-mk-posts) to finish up on things that I didnt have time for on the original project.
 
+To-do:
+- [] Fix `src/` file structure
+- [] Replace all declared `any` types with the correct type for the property
+- [] Add more tests
+- [] Add import aliases
+- [] Uninstall redundant packages
+- [] Maybe: Abstract some generic anonymous functions into a `utils/` folder
+
 ## Available Scripts
 
 In the project directory, you can run:
