@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import getRedditPosts from "./api/getRedditPosts";
-import Posts from "./client/components/Posts/index";
+import getRedditPosts from "../../../api/getRedditPosts";
+import Posts from "../../components/Posts/index";
 // import { IPost } from "./types/IPost";
 
 export interface IPost {

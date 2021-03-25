@@ -1,6 +1,6 @@
 import React from "react";
-import SVGFavorite from "../../../images/star.svg";
-import SVGFavoriteFilled from "../../../images/star--filled.svg";
+import SVGFavorite from "../../images/star.svg";
+import SVGFavoriteFilled from "../../images/star--filled.svg";
 
 import "./style.scss";
 
