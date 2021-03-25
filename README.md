@@ -5,7 +5,7 @@ List of Reddit posts from r/mechanicalkeyboards
 
 In the project directory, you can run:
 
-### `yarn install`
+### `yarn install` (or `npm install`)
 
 To add all dependencies for the app
 
