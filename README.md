@@ -1,5 +1,7 @@
-# reddit-mk-posts
+# clone-reddit-mk-posts
 List of Reddit posts from r/mechanicalkeyboards
+
+Im expanding on [https://github.com/travissanon/reddit-mk-posts](reddit-mk-posts) to finish up on things that I didnt have time for on the original project.
 
 ## Available Scripts
 
