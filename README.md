@@ -5,11 +5,11 @@ Im expanding on [reddit-mk-posts](https://github.com/travissanon/reddit-mk-posts
 
 To-do:
 - [x] Fix `src/` file structure
-- [] Replace all declared `any` types with the correct type for the property
-- [] Add more tests
+- [ ] Replace all declared `any` types with the correct type for the property
+- [ ] Add more tests
 - [x] Add import aliases
-- [] Uninstall redundant packages
-- [] Maybe: Abstract some generic anonymous functions into a `utils/` folder
+- [ ] Uninstall redundant packages
+- [ ] Maybe: Abstract some generic anonymous functions into a `utils/` folder
 
 ## Available Scripts
 
