@@ -1,17 +1,11 @@
 import React from "react";
+
+import { IPost as IPostProps } from "@client/types/IPost";
+
 import SVGFavorite from "@images/star.svg";
 import SVGFavoriteFilled from "@images/star--filled.svg";
 
 import "./style.scss";
-
-export interface IPostProps {
-	readonly id: string;
-	readonly title: string;
-	readonly thumbnail: string;
-	readonly author: string;
-	readonly favorite: boolean;
-	handleFavoriteClick: (postId: string) => void;
-}
 
 const Post: React.FC<IPostProps> = ({
 	id,

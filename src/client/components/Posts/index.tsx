@@ -1,20 +1,10 @@
 import React from "react";
 import Post from "@components/Post";
 
+import { IPost } from "@client/types/IPost";
+import { IPosts as IPostsProps } from "@client/types/IPosts";
+
 import "./style.scss";
-
-export interface IPostsProps {
-	readonly data: IPost[];
-	readonly favoritePosts: Set<string>;
-	handleFavoriteClick: (postId: string) => void;
-}
-
-export interface IPost {
-	readonly id: string;
-	readonly title: string;
-	readonly thumbnail: string;
-	readonly author: string;
-}
 
 const Posts: React.FC<IPostsProps> = ({
 	data,

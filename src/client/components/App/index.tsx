@@ -1,14 +1,9 @@
-import React, { useState, useEffect, SetStateAction } from "react";
+import React, { useState, useEffect } from "react";
 import getRedditPosts from "@api/getRedditPosts";
-import Posts from "@components/Posts";
-// import { IPost } from "./types/IPost";
 
-export interface IPost {
-	readonly id: string;
-	readonly title: string;
-	readonly thumbnail: string;
-	readonly author: string;
-}
+import Posts from "@components/Posts";
+
+import { IPost } from "@client/types/IPost";
 
 const App: React.FC = () => {
 	const [redditPosts, setRedditPosts] = useState<Array<IPost>>([]);
