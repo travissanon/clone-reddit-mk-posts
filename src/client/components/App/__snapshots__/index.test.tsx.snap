@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders content to the page 1`] = `
+<div
+  className="reddit-posts"
+>
+  <button
+    className="reddit-posts__filters"
+    onClick={[Function]}
+  >
+    Sort Posts
+  </button>
+  <div
+    className="reddit-posts"
+  >
+    <div
+      className="reddit-posts__container"
+    />
+  </div>
+</div>
+`;
