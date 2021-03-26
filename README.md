@@ -1,7 +1,7 @@
 # clone-reddit-mk-posts
 List of Reddit posts from r/mechanicalkeyboards
 
-Im expanding on [reddit-mk-posts](https://github.com/travissanon/reddit-mk-posts) to finish up on things that I didnt have time for on the original project.
+Extending on [reddit-mk-posts](https://github.com/travissanon/reddit-mk-posts) to finish up on things that I didnt have time for on the original project.
 
 To-do:
 - [x] Fix `src/` file structure
