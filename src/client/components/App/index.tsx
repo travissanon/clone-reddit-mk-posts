@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, SetStateAction } from "react";
 import getRedditPosts from "@api/getRedditPosts";
 import Posts from "@components/Posts";
 // import { IPost } from "./types/IPost";
@@ -12,16 +12,16 @@ export interface IPost {
 
 const App: React.FC = () => {
 	const [redditPosts, setRedditPosts] = useState<Array<IPost>>([]);
-	const [favoritePosts, setFavoritePosts] = useState<any>(new Set());
+	const [favoritePosts, setFavoritePosts] = useState<Set<string>>(new Set());
 
 	useEffect(() => {
 		getRedditPosts().then((data) => setRedditPosts(data));
 	}, []);
 
-	const sortPosts = () => {
-		setRedditPosts((prevState) => {
-			const newState = [...prevState];
-			newState.sort((a: any, b: any) => {
+	const sortPosts = (): void => {
+		setRedditPosts((prevState): IPost[] => {
+			const newState: IPost[] = [...prevState];
+			newState.sort((a: IPost, b: IPost): number => {
 				if (a.title < b.title) {
 					return -1;
 				} else if (a.title > b.title) {
@@ -35,24 +35,29 @@ const App: React.FC = () => {
 		});
 	};
 
-	const toggleFavoritePost = (postId: string) => {
-		setFavoritePosts((prevState: any) => {
-			// spread operator is not working for Sets in Typescript for some reason.
-			const newState = new Set(Array.from(prevState));
+	const toggleFavoritePost = (postId: string): void => {
+		setFavoritePosts(
+			(prevState: Set<string>): Set<string> => {
+				// spread operator is not working for Sets in Typescript for some reason.
+				const newState: Set<string> = new Set(Array.from(prevState));
 
-			if (newState.has(postId)) {
-				newState.delete(postId);
-			} else {
-				newState.add(postId);
+				if (newState.has(postId)) {
+					newState.delete(postId);
+				} else {
+					newState.add(postId);
+				}
+
+				return newState;
 			}
-
-			return newState;
-		});
+		);
 	};
 
 	return (
 		<div className="reddit-posts">
-			<button className="reddit-posts__filters" onClick={() => sortPosts()}>
+			<button
+				className="reddit-posts__filters"
+				onClick={(): void => sortPosts()}
+			>
 				Sort Posts
 			</button>
 			<Posts

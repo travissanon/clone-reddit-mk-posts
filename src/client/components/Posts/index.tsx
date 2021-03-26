@@ -21,24 +21,26 @@ const Posts: React.FC<IPostsProps> = ({
 	favoritePosts,
 	handleFavoriteClick,
 }) => {
-	const isFavoritePost = (id: string) => {
+	const isFavoritePost = (id: string): boolean => {
 		return favoritePosts.has(id);
 	};
 
 	return (
 		<div className="reddit-posts">
 			<div className="reddit-posts__container">
-				{data.map((post: any) => (
-					<Post
-						key={post.id}
-						id={post.id}
-						title={post.title}
-						thumbnail={post.thumbnail}
-						author={post.author}
-						favorite={isFavoritePost(post.id)}
-						handleFavoriteClick={handleFavoriteClick}
-					/>
-				))}
+				{data.map(
+					(post: IPost): React.ReactElement => (
+						<Post
+							key={post.id}
+							id={post.id}
+							title={post.title}
+							thumbnail={post.thumbnail}
+							author={post.author}
+							favorite={isFavoritePost(post.id)}
+							handleFavoriteClick={handleFavoriteClick}
+						/>
+					)
+				)}
 			</div>
 		</div>
 	);
