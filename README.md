@@ -5,7 +5,7 @@ Im expanding on [reddit-mk-posts](https://github.com/travissanon/reddit-mk-posts
 
 To-do:
 - [x] Fix `src/` file structure
-- [ ] Replace all declared `any` types with the correct type for the property
+- [x] Replace all declared `any` types with the correct type for the property
 - [ ] Add more tests
 - [x] Add import aliases
 - [ ] Uninstall redundant packages
