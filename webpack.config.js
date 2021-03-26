@@ -48,6 +48,7 @@ module.exports = {
 			"@api": path.resolve(__dirname, "src/api"),
 			"@components": path.resolve(__dirname, "src/client/components"),
 			"@images": path.resolve(__dirname, "src/client/images"),
+			"@client": path.resolve(__dirname, "src/client"),
 		},
 	},
 	output: {
