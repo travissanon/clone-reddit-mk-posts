@@ -1,5 +1,5 @@
 import React from "react";
-import Post from "../Post/index";
+import Post from "@components/Post";
 
 import "./style.scss";
 
