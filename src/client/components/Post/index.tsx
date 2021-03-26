@@ -34,7 +34,7 @@ const Post: React.FC<IPostProps> = ({
 			</div>
 			<div
 				className="reddit-post__favorite"
-				onClick={() => handleFavoriteClick(id)}
+				onClick={(): void => handleFavoriteClick(id)}
 			>
 				{favorite ? (
 					<img src={SVGFavoriteFilled} alt="favorited post" />
